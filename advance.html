@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Nav Bar -->
+    <ul>
+      <li>
+        <a href="index.html">Go back</a>
+      </li>
+      <li>
+        <a href="image.html">Image search</a>
+      </li>
+    </ul>
+    <!--search bar-->
+    <div class="container">
+      <img src="googleadv.png" alt="google">
+      <form action="https://google.com/search" name="f">
+        <div class="row">
+          <div class="col-25">
+            <label>all these words:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" class="intextadv" name="as_q" placeholder="Type here">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>this exact word or phrase:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" class="intextadv" name="as_epq" placeholder="Type here">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>any of these words:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" class="intextadv" name="as_oq" placeholder="Type here">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>none of these words:</label>
+          </div>
+          <div class="col-75">
+            <input type="text" class="intextadv" name="as_eq" placeholder="Type here">
+          </div>
+        </div>
+        <input class="btn adv" type="submit" value="Advance Google Search" />
+      </form>
+    </div>
+  </body>
+
+</html>

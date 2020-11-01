@@ -1,116 +1,308 @@
-* {
+html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: "Lato", sans-serif;
   margin: 0;
-  transition: background-color .5s;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-.sidenav {
+  padding: 0;
+  display: flex;
   height: 100%;
-  width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-image: url("../img/bk.jpg");
+  background-size: cover;;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  top: 0px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+#myDIV{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the buttons */
+.btn {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+  margin: 0 0.2em;
+  padding: 5px 10px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: #00133a;
+  border-radius: 0.25em;
+  background-color: #dbe2ef;
+  cursor: crosshair;
+  font-size: 18px;
+  box-shadow: 3px 3px 5px #00133a;
+  
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color:#112d4e;
+  color: white;
+  box-shadow: 5px 5px 10px 5px #00133a;
+
 }
 
-.sidenav .closebtn {
+.logo {
+  padding: 15px 15px;
+}
+
+.smooth {
+  scroll-behavior: smooth;
+  overflow: hidden;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  border-radius: 0.25em;
+}
+
+.smooth section {
+  width: 90vw;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.smooth section div{
+  margin-top: 50vh;
+}
+
+#one {
+  background-color: #ffffff;
+  background-image: url("../img/one.png");
+  background-repeat: no-repeat;
+  background-position: center 300px;
+  background-size: 40%;
+  overflow: hidden;
+}
+
+#one p {
+  position: relative;
+  top: 35vh;
+  font-size: 10px;
+  color: #000;
+}
+
+/* 2nd page work */
+#two {
+  background-image: url("../img/two.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+#two img {
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: 150px;
+  margin: 15px;
+  border-radius: 5px;
+  opacity: 0.5;
+  background-color: transparent;
+  transition: all 1s;
+  box-shadow: 2px 2px 2px 1px #000;
+}
+
+#two img:hover {
+  opacity: 1;
+  width: 31%;
+  box-shadow: 5px 45px 12px 5px #000;
+
+}
+
+
+
+/* button to work html*/
+.button {
+  position: relative;
+  top: 130px;
+  border-radius: 4px;
+  background-color: #00133a;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 45px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
   position: absolute;
+  opacity: 0;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: -20px;
+  transition: 0.5s;
 }
 
-#main{
-  transition: margin-left .5s;
-  padding: 16px;
-
+.button:hover span {
+  padding-right: 25px;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+/* third page */
+#three {
+  
+  color: #000;
+  background-color:#FFFFFF;
+  padding: 0px 100px;
+  padding-top: 100px;
+}
+
+#three h1 {
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 5em;
+  text-shadow: 0 3px 10px navy, 0 0 15px #0000FF;
+}
+#three h3 {
+  font-size: 1.5em;
+}
+
+#three p{
+  font-size: 1.7em;
+  margin-top: -50px;
+}
+/* list */
+#three ul {
+  list-style: none;
+  padding: 0 10%;
+}
+#three ul li {
+  background-image: linear-gradient(to right ,white, beige, salmon, beige, white);
+  color: rgb(63, 17, 17);
+  font-size: 1.5em;
+  margin: 3px;
+  padding: 10px;
+  
+}
+
+
+
+/* contact form*/
+#four {
+  background-color:white;
+  overflow: hidden;
+  padding: 150px;
+  text-align: left;
+  color: #000;
+}
+input[type=text],[type=number],[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  box-shadow: 2px 2px 4px gray;
+}
+
+input[type=submit] {
+  background-color: #00133a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #112d4e;
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 150px;
+  }
+  #one{
+    background-size: 60%;
   }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media screen and (max-width: 580px) {
+  .logo {
+    width: 100px;
+  }
+  #one{
+    background-size: 75%;
+    overflow: scroll;
+  }
+  
+  #two img {
+    width: 50%;
+    top: 30px;
+    margin: 10px;
+  }
+  #two img:hover {
+    width: 55%;
+    
+  }
+
+  #two {
+    overflow: scroll;
+  }
+  .button {
+    top: 0px;
+  }
+  
+  # {
+    overflow: scroll;
+  }
+  .col { 
+    display: block;
+    width: 50%;
+  }
+
+  #three {
+    overflow: scroll;
+  }
+
+  
 }
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-
-

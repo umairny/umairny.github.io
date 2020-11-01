@@ -1,73 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>UA | GFX</title>
-  </head>
-<body id="main">
-    <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+    <div class="content">
+    <div class="flex">
+        <img class="logo" src="img/logo.svg" alt="UAGFX">
+        <div id="myDIV">
+            <a class="btn active" href="#one">Home</a>
+            <a class="btn" href="#two">Work</a>
+            <a class="btn" href="#three">About</a>
+            <a class="btn" href="#four">Contact</a>
+        </div>
+    </div>
+    <div class="smooth" id="down">
+        <section id="one">
+            <div>
+           <p>Credit By: Chris Pullman served for 35 years as vice president of design for WGBH, <br>
+            a major supplier of programs and web content for PBS, and a wonderful place to be a designer.</p>    
+            </div>  
+        </section>
 
-  <div class="header">
-    <h1>My Website</h1>
-    <p>A <b>responsive</b> website created by me.</p>
-  </div>
+        <section id="two">
+            <img src="img/imgflyer.jpg" alt="">
+            <img src="img/imglogo.jpg" alt="">
+            <img src="img/imgposter.jpg" alt="">
+            
+            <button class="button" onclick="window.location.href='work.html';"><span>For more work click here</span></button>
+        </section>
 
+        <section id="three">
+                <h1>Our Mission</h1>
+                <p>We strongly emphasize our ability to take an idea from concept to execution with an innovative approach to</p>
+                   <ul>
+                       <li>branding </li>
+                       <li>design </li>
+                       <li>marketing </li>
+                   </ul>   
+                <h3>We offer a wide variety of in-house creative products including</h3>
+                <ul>
+                    <li>graphic design</li>
+                    <li>web design</li>
+                    <li>motion design</li>
+                </ul>
+                <h3>We have good understanding of complete printing process.</h3>
+        </section>
 
-  <div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
-</div>
+        <section id="four">
+            <form action="/action_page.php">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+                <label for="lname">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email..">
+                                
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" name="phone" placeholder="Your phone number..">
 
+                <label for="service">Type of service</label>
+                <select id="service" name="service">
+                <option value="graphic">Graphic Design</option>
+                <option value="web">Web Design</option>
+                <option value="motion">Motion Design</option>
+                </select>
 
+                <label for="details">Details</label>
+                <textarea id="details" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
+                <input type="submit" value="Submit">
+            </form>
+            
+        </section>
+    </div>
+    </div>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.body.style.backgroundColor = "white";
-}
-</script>
-   
-</body>
-</html> 
+    <script src="js/main.js" async defer></script>
+    </body>
+</html>

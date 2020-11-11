@@ -286,12 +286,6 @@ td {
 }
 
 /* Work show case page */
-.gallery {
-  grid-column: 1 / span 12;
-  background-color: fff;
-  color: #333;
-}
-
 .catag {
   font-size: 1em;
   margin: 5px 0 25px;
@@ -315,17 +309,18 @@ td {
 
 /* page size of work width */
 #projects {
-  display: block;
-  width: 1250px;
+  grid-column: 1 / span 12;
+  position: relative;
+  text-align: center;
   margin: 30px auto;
-}
 
+}
 
 #projects .flip {
   width: 400px;
   height: 400px;
   display: inline-block;
-
+  text-align: left;
   -webkit-transform: scale(0.90);
   -moz-transform: scale(0.90);
   -o-transform: scale(0.90);
@@ -390,8 +385,8 @@ td {
 
 .front,
 .back {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -408,8 +403,8 @@ td {
   -o-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  width: 360px;
-  height: 360px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   z-index: 1;
   background: #efefd0;
@@ -476,8 +471,6 @@ h1 {
   width: 40%;
 }
 
-@media screen and (max-width:900px) {}
-
 
 /* for small screen */
 @media screen and (max-width: 900px) {
@@ -497,10 +490,7 @@ h1 {
     font-size: 1em;
   }
 
-  .footer {
-    display: block;
-  }
-
+  .footer,
   .price {
     display: block;
   }
@@ -509,13 +499,10 @@ h1 {
     right: 20px;
   }
 
-  #projects {
-    width: 850px;
-  }
-
   .about {
     display: inline;
   }
+
 
   .umlogo,
   .tagline,
@@ -525,8 +512,9 @@ h1 {
   }
 }
 
-@media screen and (max-width:600px) {
-  #projects {
-    width: 550px;
+@media screen and (max-width:450px) {
+  #projects .flip {
+    width: 250px;
+    height: 250px;
   }
 }

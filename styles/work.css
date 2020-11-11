@@ -1,121 +1,142 @@
-
-/* work show gallary */
-html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
+.gallery {
+	grid-column: 1 / span 12;
+	background-color: fff;
+	color: #333;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-body {
-    margin: auto;
-    padding: 20px;
+.catag {
+	font-size: 1em;
+	margin: 5px 0 25px;
 }
 
-/* Center website */
-.main {
-  max-width: 1200px;
-  margin: auto;
-}
-.logo {
-  width: 200px;
-}
-.logo a{
-  text-decoration: none;
-  font-size: 1.5em;
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  background-color: #ddd;
-  padding: 15px;
-  border-radius: 10px;
-  color: black;
-  box-shadow: 2px 2px 3px black;
+.catag>a {
+	background-color: #205F82;
+	color: #efefd0;
+	padding: 5px;
+	border-radius: 5px;
 }
 
-.logo a:hover {
-  color: #ddd;
-  background-color: #666;
-  box-shadow: 4px 4px 10px black;
+.catag>a:hover {
+	background-color: black;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
+.date {
+	font-size: 13px;
+	font-weight: bold;
 }
 
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
-
-@media screen and (max-width: 850px) {
-.column {
-  width:50%;
-  }
+/**/
+#projects {
+	width: 1250px;
+	margin: 30px auto;
 }
 
 
-@media screen and (max-width: 550px) {
-  .column {
-  width: 100%;
-  }
+#projects .flip {
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+
+	-webkit-transform: scale(0.90);
+	-moz-transform: scale(0.90);
+	-o-transform: scale(0.90);
+	-ms-transform: scale(0.90);
+	transform: scale(0.90);
+
+	-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
 }
 
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#projects .flip:hover {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+
+	-webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+	cursor: pointer;
 }
 
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
+#projects .flip.blur {
+	-webkit-filter: blur(3px);
+
+	-webkit-transform: scale(0.88);
+	-moz-transform: scale(0.88);
+	-o-transform: scale(0.88);
+	-ms-transform: scale(0.88);
+	transform: scale(0.88);
+	filter: alpha(opacity=60);
+	opacity: 0.6;
 }
 
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
+#projects .flip.rotate {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
+#projects:hover .clicked {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
-.btn:hover {
-  background-color: #ddd;
+.front,
+.back {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
 }
 
-.btn.active {
-  background-color: #666;
-  color: white;
+.front {
+	z-index: 2;
 }
 
-
-
-/* skew the rows*/
-#gal {
-	transition: transform 0.25s;
-	will-change: transform;
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	width: 360px;
+	height: 360px;
+	padding: 20px;
+	z-index: 1;
+	background: #efefd0;
 }
 
+/* for small screen */
+@media screen and (max-width:900px) {
+	#projects {
+		width: 850px;
+		margin: 15px auto;
+	}
+}
+
+@media screen and (max-width:600px) {
+	#projects {
+		width: 550px;
+		margin: 15px auto;
+	}
+}

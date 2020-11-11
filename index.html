@@ -10,85 +10,134 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey|Montserrat">
         <link rel="stylesheet" href="styles/style.css">
-        
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-    <div class="content">
-    <div class="flex">
-        <img class="logo" src="img/logo.svg" alt="UAGFX">
-        <div id="myDIV">
-            <a class="btn active" href="#one">Home</a>
-            <a class="btn" href="#two">Work</a>
-            <a class="btn" href="#three">About</a>
-            <a class="btn" href="#four">Contact</a>
-        </div>
-    </div>
-    <div class="smooth" id="down">
-        <section id="one">
-            <div>
-           <p>Credit By: Chris Pullman served for 35 years as vice president of design for WGBH, <br>
-            a major supplier of programs and web content for PBS, and a wonderful place to be a designer.</p>    
-            </div>  
-        </section>
-
-        <section id="two">
-            <img src="img/imgflyer.jpg" alt="">
-            <img src="img/imglogo.jpg" alt="">
-            <img src="img/imgposter.jpg" alt="">
-            
-            <button class="button" onclick="window.location.href='work.html';"><span>For more work click here</span></button>
-        </section>
-
-        <section id="three">
-                <h1>Our Mission</h1>
-                <p>We strongly emphasize our ability to take an idea from concept to execution with an innovative approach to</p>
-                   <ul>
-                       <li>branding </li>
-                       <li>design </li>
-                       <li>marketing </li>
-                   </ul>   
-                <h3>We offer a wide variety of in-house creative products including</h3>
+        <header>
+            <img class="logo" src="img/logo.svg" alt="">
+            <nav id="mainnav" role="navigation">
                 <ul>
-                    <li>graphic design</li>
-                    <li>web design</li>
-                    <li>motion design</li>
+                    <li><a href="#"><i class="menuicon">W</i> <span>Menu</span></a></li>
+                    <li><a href="index.html"><i class="homeicon">W</i><span>Home</span></a></li>
+                    <li><a href="work.html"><i class="workicon">W</i><span>Work</span></a></li>
+                    <li><a href="about.html"><i class="abouticon">W</i><span>About</span></a></li>
+                    <li><a href="contact.html"><i class="contacticon">W</i><span>Contact Us</span></a></li>
                 </ul>
-                <h3>We have good understanding of complete printing process.</h3>
-        </section>
+            </nav>
+        </header>
 
-        <section id="four">
-            <form action="/action_page.php">
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Your name..">
+        <div class="Lcol">
+            <div class="txt">
+                <h1 class="title">We built design that built your business.</h1>
+                <h2>I’m passionate. I’m creative. I love what I do.</h2>
+                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
+            </div>
+        </div>
+        <div class="Rcol"><img src="img/graphicpic.jpg" alt="Graphic"></div>
 
-                <label for="lname">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email..">
-                                
-                <label for="phone">Phone Number</label>
-                <input type="number" id="phone" name="phone" placeholder="Your phone number..">
-
-                <label for="service">Type of service</label>
-                <select id="service" name="service">
-                <option value="graphic">Graphic Design</option>
-                <option value="web">Web Design</option>
-                <option value="motion">Motion Design</option>
-                </select>
-
-                <label for="details">Details</label>
-                <textarea id="details" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
+        <div class="Lcol"><img src="img/webpic.jpg" alt="Graphic"></div>
+        <div class="Rcol">
+            <div class="txt">
+                <h1 class="title">Creative, flexible and affordable website design.</h1>
+                <h2>The goal isn’t to build a website. The goal is to build your business.</h2>
+                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
+            </div>
+        </div>
+        
+        <div class="Lcol">
+            <div class="txt">
+                <h1 class="title">Exceptional images deserve exceptional presentation.</h1>
+                <h2>Bringing your creativity to life.</h2>
+                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
+            </div>
+        </div>
+        <div class="Rcol gifimg"><img src="img/motionpic.png" alt="Graphic">
             
-        </section>
-    </div>
-    </div>
+        </div>        
+        <div class="footer">
+            <h1 class="title">Our Prices</h1>
+            <p>here some of our fix work prices. <a href="contact.html">For more complex work please contact us.</a></p>
+            
+            <div class="price">
+                <div>
+                    <h1>Grapic design</h1>
+                    <p>Design only 2 proposals</p>
+                    <table>
+                        <tr>
+                            <td>Logo</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Business card</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>BC + LP + Envlope</td>
+                            <td>$75.00</td>
+                        </tr>
+                        <tr>
+                            <td>Logo + BC + LP + Envlope</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Packaging Design</td>
+                            <td>$100.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h1>Web design</h1>
+                    <p>Design only 2 proposals HTML</p>
+                    <table>
+                        <tr>
+                            <td>Single Page</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Three Pages</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Four Pages</td>
+                            <td>$125.00</td>
+                        </tr>
+                        <tr>
+                            <td>Wordpress website</td>
+                            <td>$150.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h1>Motion design</h1>
+                    <p>Design only 2 proposals</p>
+                    <table>
+                        <tr>
+                            <td>Logo Animation</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Short Animation</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Video Editing upto 5 min</td>
+                            <td>$125.00</td>
+                        </tr>
+                        <tr>
+                            <td>Promo-videos editing</td>
+                            <td>$150.00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-    <script src="js/main.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js" async defer></script>
     </body>
 </html>

@@ -315,6 +315,7 @@ td {
 
 /* page size of work width */
 #projects {
+  display: block;
   width: 1250px;
   margin: 30px auto;
 }

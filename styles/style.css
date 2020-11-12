@@ -43,14 +43,13 @@ header {
   margin-bottom: -0.1em;
 }
 
-.txt h2 {
+h2 {
   color: #FF6B35;
-  font-size: 1.5vw;
-  margin-bottom: -.4em;
+  font-size: 2rem;
 }
 
-.txt p {
-  font-size: 1vw;
+p {
+  font-size: 1rem;
 }
 
 /* end setting of main text */
@@ -104,7 +103,6 @@ div img {
 
 table {
   width: 100%;
-  font-size: 1.4em;
   color: black;
 }
 
@@ -129,7 +127,7 @@ td {
 #mainnav ul {
   position: absolute;
   top: -20px;
-  left: -20px;
+  left: -60px;
   z-index: 100;
 }
 
@@ -287,7 +285,6 @@ td {
 
 /* Work show case page */
 .catag {
-  font-size: 1em;
   margin: 5px 0 25px;
 }
 
@@ -391,6 +388,7 @@ td {
   top: 0;
   left: 0;
   backface-visibility: hidden;
+
 }
 
 .front {
@@ -412,7 +410,6 @@ td {
 
 /* About Page*/
 h1 {
-  font-size: 4vmin;
   font-family: 'Aparey', Times, serif;
   color: #004E89;
   margin-bottom: 0;
@@ -441,7 +438,6 @@ h1 {
 }
 
 .tagline h1 {
-  font-size: 5vmin;
   background-color: #004E89;
   color: aliceblue;
   padding: 5px;
@@ -450,11 +446,11 @@ h1 {
 
 .tagline h2 {
   margin-bottom: -5px;
-  font-size: 4vmin;
+
 }
 
 .tagline h3 {
-  font-size: 2.5vmin;
+  font-size: 1rem;
 }
 
 .tagline img {
@@ -473,7 +469,7 @@ h1 {
 
 
 /* for small screen */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   body {
     display: block;
   }
@@ -482,11 +478,11 @@ h1 {
     font-size: 3em;
   }
 
-  .txt h2 {
+  h2 {
     font-size: 1.5em;
   }
 
-  .txt p {
+  p {
     font-size: 1em;
   }
 

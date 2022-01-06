@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    background-image: linear-gradient(90deg, #8b8b8b 0%, #8b8b8b 3%, #000000 4% ,  #000000 100%);
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    color: #fff;
+    height: 100vh;
+}
+/**********/
+/* Logo on right */
+#logo {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    text-align: right;
+}
+#logo h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: goldenrod;
+}
+/* Logo text animations */
+#logosub {
+    height: 2em;
+    overflow: hidden;
+}
+#logosub ul{
+    list-style: none;
+    text-align: right;
+}
+#logosub ul li{
+    padding-bottom: 2em;
+    font-size: large;
+    position: relative;
+    top: -0.25em;
+    animation: sub 7s ease-in-out infinite;
+}
+@keyframes sub {
+    0%{
+        opacity: 0;
+        top: 0.25em;
+    }
+    5%{
+        opacity: 1;
+        top: 0.25em;
+     }
+    35%{
+        opacity: 1;
+        top: 0.25em;
+     }
+    38%{
+        opacity: 0;
+        top: -2em;
+    } 
+    40%{
+        opacity: 1;
+        top: -3em;
+    }
+    70%{
+        top: -3em;
+        opacity: 1;
+    }
+    73%{
+        opacity: 0;
+        top: -5em;
+    }
+    75%{
+        opacity: 1;
+        top: -6.25em;
+    }
+    95%{
+        top: -6.25em;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: -6.25em;
+    }
+}
+
+/* Nav bar left */
+nav {
+    position: fixed;
+    top: 10%;
+    left: 6%;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li a{
+    font-size: x-large;
+    text-decoration: none;
+    background-color: #000000;
+    color: #8b8b8b;
+    line-height: 1.8em;
+    border-radius: 25px;
+    padding:5px 30px;
+    opacity: 0.7;
+}
+nav ul li a:hover{
+    color: #e2e2e2;
+    border: 2px solid gold;
+    border-radius: 25px;
+    padding:5px 30px;
+}
+.active{
+    color: peru;
+    border: 2px solid peru;
+    border-radius: 25px;
+    padding:5px 30px;
+}
+.icon{
+    display: none;
+    position: fixed;
+    left: 7%;
+    top: 3%;
+    font-size: 4em;
+    z-index: 100;
+}
+
+/* absolute center all the pages with class */
+.page{
+    color: #e2e2e2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Home page content setting */
+#home {
+    overflow-x: hidden;
+}
+#home h1{
+    color: goldenrod;
+    margin: 0.75em;
+}
+#home p{
+    color: #8b8b8b;
+    line-height: 1.25em;
+    font-size: 1.25em;
+    margin: 0.5em;
+}
+
+/* Design page content setting */
+#design{
+    display: none;
+    overflow-x: hidden;
+}
+/* Gallery designs */
+#gal{
+    height: 70vh;
+    display: flex;
+}
+/* enlarge image display*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+#overlay img {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* small image views */
+.img {
+    width: 7vw;
+    height: 100%;
+    opacity: 0.7;
+    overflow: hidden;
+    display: none;
+    background-size: cover;
+}
+.img01{
+    background-image: url("../img/gallery/img01.png");
+}
+.img02{
+    background-image: url("../img/gallery/img02.png");
+}
+.img03{
+    background-image: url("../img/gallery/img03.png");
+}
+.img04{
+    background-image: url("../img/gallery/img04.png");
+}
+.img05{
+    background-image: url("../img/gallery/img05.png");
+}
+.img06{
+    background-image: url("../img/gallery/img06.png");
+}
+.img07{
+    background-image: url("../img/gallery/img07.png");
+}
+.img08{
+    background-image: url("../img/gallery/img08.png");
+}
+
+/* Dev page content setting */
+#dev{
+    display: none;
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#dev article{
+    width: 50vw;
+    padding: 1em;
+}
+#dev article h3{
+    padding: 0.5em;
+}
+#dev article p{
+    padding: 0.75em;
+}
+#dev article h3 span{
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+.more{
+    color: silver;
+}
+.you_btn >span{
+    padding: 0.2em 0.8em;
+    margin-right: 0.7em;
+    border: 1.5px white solid;
+    border-radius: 5px;
+    background-image: url(../img/play.svg);
+    background-position: center;
+    background-size: cover;
+}
+.dev_btn, .you_btn {
+    padding: 0.5em;
+    margin: 0.25em;
+    display: inline-block;
+    text-align: center;
+    background-color: peru;
+    color: #000000;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+.dev_btn:hover, .you_btn:hover {
+    background-color: goldenrod;
+    box-shadow: 0 0 10px white;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+/* About page content setting */
+#about{
+    display: none;
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* Designing for scroll-bar */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: gainsboro;
+        border-radius: 5px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: goldenrod;
+        border-radius: 5px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: peru;
+}
+#about section article{
+    float: left;
+    width: 40%;
+    padding: 3%;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+#about h1, h2, h3, h4 {
+    color: gold;
+    margin-bottom: 0.4em;
+}
+#about h5, h6 {
+    color: peru;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+}
+.edu_p1{
+    font-size: 0.8em;
+}
+.edu_p2{
+    text-align: right;
+    font-size: 0.8em;
+}
+
+#about hr {
+    margin-bottom: 0.2em;
+}
+#about img {
+    width: 4em;
+    padding: 0.2em;
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Contact page content setting */
+a {
+    text-decoration: none;
+    color: greenyellow;
+}
+a:hover{
+    color: peru;
+}
+#contact{
+    display: none;
+    overflow-x: hidden;
+}
+#contact form {
+    width: 50vw;
+    margin: 2em;
+}
+#contact form input{
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 25px;
+    width: 100%;
+}
+#contact form textarea{
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 5px;
+    width: 100%;
+}
+#contact form input:focus{
+    box-shadow: 0px 0px 15px gold;
+}
+#button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#button:hover {
+    background-color: peru;
+}
+.info {
+    margin-top: 1em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ******** */
+/* Footer */
+footer{
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+}
+#news {
+    height: 2em;
+    overflow: hidden;
+}
+#news ul{
+    list-style: none;
+    text-align: right;
+}
+#news ul li{
+    padding-bottom: 2em;
+    font-size: large;
+    position: relative;
+    top: 0em;
+    animation: news 15s ease-in-out infinite;
+}
+@keyframes news {
+    0%{
+        opacity: 0;
+        top: 0.25em;
+    }
+    10%{
+        opacity: 1;
+        top: 0.25em;
+     }
+    20%{
+        top: -3em;
+    }
+    30%{
+        top: -3em;
+    }
+    40%{
+        top: -6.25em;
+    }
+    50%{
+        top: -6.25em;
+    }
+    60%{
+        top: -9.25em;
+    }
+    70%{
+        top: -9.25em;
+    }
+    80%{
+        top:-12.5em;
+    }
+    90%{
+        top: -12.5em;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: -12.5em;
+    }
+}
+/* ******** */
+/* screen size less than 780 settins*/
+@media only screen and (max-width: 780px) {
+    nav{ 
+        display: none;
+        z-index: 100;
+     }
+     nav ul li a{
+         opacity: 1;
+     }
+    .icon{ 
+        display: block;
+    }
+    #home, #about, #design, #contact, #dev {
+        height: 60vh;
+        width: 90%;
+        overflow-y: scroll;
+    }
+    .img {
+        width: 10vw;
+    }
+    #about section article{
+        width: 75vw;
+    }
+    #contact form {
+        width: 70vw;
+    }
+}
+

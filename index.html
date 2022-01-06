@@ -1,143 +1,332 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey|Montserrat">
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header>
-            <img class="logo" src="img/logo.svg" alt="">
-            <nav id="mainnav" role="navigation">
-                <ul>
-                    <li><a href="#"><i class="menuicon">W</i> <span>Menu</span></a></li>
-                    <li><a href="index.html"><i class="homeicon">W</i><span>Home</span></a></li>
-                    <li><a href="work.html"><i class="workicon">W</i><span>Work</span></a></li>
-                    <li><a href="about.html"><i class="abouticon">W</i><span>About</span></a></li>
-                    <li><a href="contact.html"><i class="contacticon">W</i><span>Contact Us</span></a></li>
-                </ul>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umair Ahmad</title>
 
-        <div class="Lcol">
-            <div class="txt">
-                <h1 class="title">We built design that built your business.</h1>
-                <h2>I’m passionate. I’m creative. I love what I do.</h2>
-                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
-            </div>
+    <!-- Link local css style sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Fonts from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Email form from EmailJs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_LQzMTE2QQOQ3t23GFT8aF");
+    })();
+    </script>
+</head>
+<body>
+    <!-- Name and logo right top-->
+    <div id="logo">
+        <h1><em>Umair Ahmad</em></h1>
+        <div id="logosub">
+            <ul>
+                <li class="sub">Graphic Designer</li>
+                <li class="sub">Full Stack Web Developer</li>
+                <li class="sub">Full Stack Cloud Developer</li>
+            </ul>
         </div>
-        <div class="Rcol"><img src="img/graphicpic.jpg" alt="Graphic"></div>
+    </div>
+    
+    <!-- Left nave bar -->
+    <div class="icon">&#8801;</div>
+    <nav>
+        <ul>
+            <li><a class="active btn" href="#home">Home</a></li>
+            <li><a class="btn" href="#design">Designs</a></li>
+            <li><a class="btn" href="#dev">Web Dev</a></li>
+            <li><a class="btn" href="#about">About</a></li>
+            <li><a class="btn" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="Lcol"><img src="img/webpic.jpg" alt="Graphic"></div>
-        <div class="Rcol">
-            <div class="txt">
-                <h1 class="title">Creative, flexible and affordable website design.</h1>
-                <h2>The goal isn’t to build a website. The goal is to build your business.</h2>
-                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
-            </div>
+    
+    <!-- Home -->
+    <div id="home" class="page">
+        <div>
+            <h1>I’m passionate. I’m creative. I love what I do : )</h1>
         </div>
-        
-        <div class="Lcol">
-            <div class="txt">
-                <h1 class="title">Exceptional images deserve exceptional presentation.</h1>
-                <h2>Bringing your creativity to life.</h2>
-                <p>I am a freelance graphic/web/motion designer. I enjoy designing graphics, icons, teasers and smart illustrations for your websites and other projects.</p>
-            </div>
+        <div>
+            <p>Design is a visual form of communication that opens my imagination, allowing me to bring design to life through the composition of lines, shapes and typography. My skills allow me to transform an ordinary concept into an eye-catching design.</p>
         </div>
-        <div class="Rcol gifimg"><img src="img/motionpic.png" alt="Graphic">
-            
-        </div>        
-        <div class="footer">
-            <h1 class="title">Our Prices</h1>
-            <p>here some of our fix work prices. <a href="contact.html">For more complex work please contact us.</a></p>
-            
-            <div class="price">
-                <div>
-                    <h1>Grapic design</h1>
-                    <p>Design only 2 proposals</p>
-                    <table>
-                        <tr>
-                            <td>Logo</td>
-                            <td>$50.00</td>
-                        </tr>
-                        <tr>
-                            <td>Business card</td>
-                            <td>$50.00</td>
-                        </tr>
-                        <tr>
-                            <td>BC + LP + Envlope</td>
-                            <td>$75.00</td>
-                        </tr>
-                        <tr>
-                            <td>Logo + BC + LP + Envlope</td>
-                            <td>$100.00</td>
-                        </tr>
-                        <tr>
-                            <td>Packaging Design</td>
-                            <td>$100.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <h1>Web design</h1>
-                    <p>Design only 2 proposals HTML</p>
-                    <table>
-                        <tr>
-                            <td>Single Page</td>
-                            <td>$50.00</td>
-                        </tr>
-                        <tr>
-                            <td>Three Pages</td>
-                            <td>$100.00</td>
-                        </tr>
-                        <tr>
-                            <td>Four Pages</td>
-                            <td>$125.00</td>
-                        </tr>
-                        <tr>
-                            <td>Wordpress website</td>
-                            <td>$150.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <h1>Motion design</h1>
-                    <p>Design only 2 proposals</p>
-                    <table>
-                        <tr>
-                            <td>Logo Animation</td>
-                            <td>$50.00</td>
-                        </tr>
-                        <tr>
-                            <td>Short Animation</td>
-                            <td>$100.00</td>
-                        </tr>
-                        <tr>
-                            <td>Video Editing upto 5 min</td>
-                            <td>$125.00</td>
-                        </tr>
-                        <tr>
-                            <td>Promo-videos editing</td>
-                            <td>$150.00</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        <div>
+            <p>I learned, practiced and continue to learn new skills in the following: HTML, Css, Js, Python, SQL, Node js, Express Js, MongoDB, React and Django.</p>
         </div>
+    </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/main.js" async defer></script>
-    </body>
+    <!-- Design -->
+    <div id="design" class="page">
+        <div>
+            <h3>Click to view full Design</h3>
+        </div>
+        <div id="gal">
+            <div class="img01 img" name="The tag imag 001"></div>
+            <div class="img02 img" name="The tag imag 002"></div>
+            <div class="img03 img" name="The tag imag 003"></div>
+            <div class="img04 img" name="The tag imag 003"></div>
+            <div class="img05 img" name="The tag imag 003"></div>
+            <div class="img06 img" name="The tag imag 003"></div>
+            <div class="img07 img" name="The tag imag 003"></div>
+            <div class="img08 img" name="The tag imag 003"></div>
+        </div>
+    </div>
+
+    <!-- Dev -->
+    <div id="dev" class="page">
+        <h3>My web dev projects videos, try app and code links </h3>
+        <hr>
+        <article>
+            <h3>Auction App | <span>Python, Django and deployed on herokuapp.com</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/uiIx6cprAaE"><span></span>YouTube</a>
+            <a class="dev_btn" href="http://umairdj.herokuapp.com/auctions/" target="_blank">Try App</a>
+            <a class="dev_btn" href="https://github.com/umairny/django/tree/main/auctions" target="_blank">Github link</a>
+            <p class="disp-cont">
+                An app that shows little eBay. 
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can create an item, comment, add/remove to watchlist, bid on items, and select by category. The winner of the item shows if you are the winner.                          </p>
+            <a href="#" class="more">more</a>
+        </article>
+        <hr>
+        <article>
+            <h3>Restaurant App | <span>ReactJs, Redux, Nodejs, ExpressJs and MongoDB</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/2951AHT8vmA"><span></span>YouTube</a>
+            <a class="dev_btn" href="https://github.com/umairny/express" target="_blank">Github link Backend</a>
+            <a class="dev_btn" href="https://github.com/umairny/restaurant" target="_blank">Github link Frontend</a>
+            <p class="disp-cont">
+                This app created with Node-js, express, mongodb, and reactjs.
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can see the dishes, leaders, you can favorite the dishes and comment on them if you have an account and are logged in. You can also contact the restaurant via the feedback form.
+            </p>
+            <a href="#" class="more">more</a>
+        </article>
+        <hr>
+        <article>
+            <h3>Ads Site App | <span>Python, Django, JSON, JS, jquery, SQL and deployed on pythonanywhere.com</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/TQm_RWh3ScU"><span></span>YouTube</a>
+            <a class="dev_btn" href="https://umairny.pythonanywhere.com/ads" target="_blank">Try App</a>
+            <p class="disp-cont">
+                In this app you can create Ads, edit, fav, and comment if you are authenticated.
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can create an Ad, edit it, add/remove if you created this Ad. You can comment and favorite any Ad if you are logged in. This app is deployed on pythonanywhere website.
+            </p>
+            <a href="#" class="more">more</a>
+        </article>
+        <hr>
+        <article>
+            <h3>E-mail App | <span>Single page app Django, JSON, Javascript and deployed on herokuapp.com</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/MtOYfxbSdJo"><span></span>YouTube</a>
+            <a class="dev_btn" href="http://umairdj.herokuapp.com/mail/" target="_blank">Try App</a>
+            <a class="dev_btn" href="https://github.com/umairny/django/tree/main/mail" target="_blank">Github link</a>
+            <p class="disp-cont">
+                A single page app. This shows some examples of how email apps work.
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can compose, send, receive, and archive emails. Also, you can reply to emails, see the sent, archived emails.
+            </p>
+            <a href="#" class="more">more</a>
+        </article>
+        <hr>
+        <article>
+            <h3>Social Network App | <span>Python, Django and deployed on herokuapp.com</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/YGODEgPwSGY"><span></span>YouTube</a>
+            <a class="dev_btn" href="http://umairdj.herokuapp.com/network/" target="_blank">Try App</a>
+            <a class="dev_btn" href="https://github.com/umairny/django/tree/main/network" target="_blank">Github link</a>
+            <p class="disp-cont">
+                An app that shows simple social networks.
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can post, edit post, comment on post and Like the post. Also, you can follow others, see your followers posts and edit your profile.
+            </p>
+            <a href="#" class="more">more</a>
+        </article>
+        <hr>
+        <article>
+            <h3>Wiki App | <span>Python, Django, fils storage and deployed on herokuapp.com</span></h3>
+            <a class="you_btn" name="https://www.youtube.com/embed/YOcolbDtCLo"><span></span>YouTube</a>
+            <a class="dev_btn" href="http://umairdj.herokuapp.com/wiki/" target="_blank">Try App</a>
+            <a class="dev_btn" href="https://github.com/umairny/django/tree/main/wiki" target="_blank">Github link</a>
+            <p class="disp-cont">
+                An app that use Markdown language to CUR operation.
+            </p>
+            <p class="more-cont" style="display:none;">
+                In this app you can create, update, and retrieve pages. Also, you can search the pages and randomly select the pages.
+            </p>
+            <a href="#" class="more">more</a>
+        </article>
+
+
+
+    </div>
+    
+    <!-- About -->
+    <div id="about" class="page">
+        <section>
+            <article>
+                <h3>Intro</h3>
+                <p>Design is a visual form of communication that opens my imagination, allowing me to bring design to life through the composition of lines, shapes and typography. My skills allow me to transform an ordinary concept into an eye-catching design.</p>
+                <p> I have fulfilled my passion for designing throughout my career as a graphic designer until I discovered my new interest for computer science last year while staying at home because of Covid-19 pandemic. I learned, practiced and continue to learn new skills in the following: HTML, Css, Js, Python, SQL, Node js, Express Js, MongoDB, React and Django.</p>
+                <p>My experience and knowledge of graphic/packaging designing and full-stack Web Development will be an asset for your organization. </p>
+                
+                <!--Technical skills-->
+                <h3 style="margin-top: 3em;">Technical Skills</h3>
+                <hr>
+                <h5>Graphic Designer</h5>
+                <img src="img/techskills/Illustrator.png" alt="illustrato">
+                <img src="img/techskills/Photoshop.png" alt="photoshop">
+                <img src="img/techskills/InDesign.png" alt="indesign">
+                <img src="img/techskills/Premiere Pro.png" alt="permire">
+                <img src="img/techskills/After Effects.png" alt="afftereffect">
+                <img src="img/techskills/corel.png" alt="corel">
+                <img src="img/techskills/3ds.png" alt="3ds">
+                <img src="img/techskills/filmora.png" alt="filmora">
+                <h5>Full stack web dev</h5>
+                <img src="img/techskills/html.png" alt="html">
+                <img src="img/techskills/css.png" alt="css">
+                <img src="img/techskills/js.png" alt="js">
+                <img src="img/techskills/python.png" alt="py">
+                <img src="img/techskills/django.png" alt="django">
+                <img src="img/techskills/docker.png" alt="docker">
+                <img src="img/techskills/kubernetes.png" alt="Kubernetes">
+                <img src="img/techskills/ibmcloud.png" alt="ibmcloud">
+                <img src="img/techskills/express.png" alt="express">
+                <img src="img/techskills/react.png" alt="react">
+                <img src="img/techskills/sql.png" alt="sql">
+                <img src="img/techskills/mongo.png" alt="mongodb">
+                
+                <!-- Career History -->
+                <h3 style="margin-top: 3em;">Career History</h3>
+                <hr>
+                <h5>CAPTEEVATE (NYC)</h5>
+                <p class="edu_p1">Graphic Designer</p>
+                <p class="edu_p2">July 2014 - Dec 2018</p>
+                <p>Create custom designs for print on the T-shirts, sweaters, hoodies. Guide co-workers in new design tools and skills to create a better workflow. Communicate directly with clients to satisfy their requirements. </p>
+
+                <h5>CONCEPTION ART (LHR-PAK)</h5>
+                <p class="edu_p1">Senior Graphic Designer</p>
+                <p class="edu_p2">Feb 2013 - Feb 2014</p>
+                <p>Met clients to discuss their needs, objectives and budgets. Created a wide variety of graphic art and promotional material. Trained juniors on relevant design tools. </p>
+
+                <h5>STYLO GRAPHICS (LHR-PAK)</h5>
+                <p class="edu_p1">Senior Graphic Designer</p>
+                <p class="edu_p2">Jan 2000 - Feb 2013</p>
+                <p>Produced designs for both paper and tin printing. Engaged customers in the design process. Explained design concepts and ideas to clients and colleagues.</p>
+                
+                <h5>STYLO GRAPHICS (LHR-PAK)</h5>
+                <p class="edu_p1">Junior Graphic Designer</p>
+                <p class="edu_p2">Dec 1997 - Dec 1999</p>
+                <p>Assisted Senior Graphic Designer on multiple printing projects. Provided graphical support to my colleagues and senior designers. Coordinated with vendors. </p>
+            </article>
+            <article>
+                <h3>Objective</h3>
+                <p>I am interested in working for a team who values craftsmanship and creating experiences that are memorable. I am a highly analytical problem-solver with over a decade of experience in print and packaging designs. I am a motivated self-starter and always love to learn. I recently learned and applied the web development technologies knowledge and skills to create sample projects.</p>
+                
+                <!--Education-->
+                <h3 style="margin-top: 3em;">Education</h3>
+                <hr>
+                <h5>IBM Full Stack Cloud Developer</h5>
+                <p class="edu_p1">IBM PROFESSIONAL CERTIFICATE</p>
+                <p class="edu_p2">Coursera Online | Aug 2021 - Dec 2021</p>
+                <p>Introduction to Cloud Computing | Introduction to Web Development with HTML, CSS, JavaScript | Developing Cloud Native Applications | 
+                Developing Cloud Apps with Node.js and React | Introduction to Containers w/ Docker, Kubernetes & OpenShift | 
+                Python for Data Science, AI & Development | Python Project for AI & Application Development | 
+                Developing Applications with SQL, Databases, and Django | Application Development using Microservices and Serverless | 
+                Full Stack Cloud Development Capstone Project</p>
+
+                <h5>Full-Stack Web Development with React</h5>
+                <p class="edu_p1">The Hong Kong University of Science and Technology</p>
+                <p class="edu_p2">Coursera Online | Mar 2021 - May 2021</p>
+                <p>Front-End Web UI Frameworks and Tools: Bootstrap 4 | Front-End Web Development with React | Server-side Development with NodeJS, Express and MongoDB</p>
+
+                <h5>Django for Everbody</h5>
+                <p class="edu_p1">University of Michigan</p>
+                <p class="edu_p2">Coursera Online | Feb 2021 - Mar 2021</p>
+                <p>Web Application Technologies and Django | Building Web Applications in Django | Django Features and Libraries | Using JavaScript, JQuery, and JSON in Django</p>
+
+                <h5>Python for everybody</h5>
+                <p class="edu_p1">University of Michigan</p>
+                <p class="edu_p2">Coursera Online | Oct 2020 - Feb 2021</p>
+                <p>Using Python to Access Web Data | Retrieving, Processing, and Visualizing Data with Python | Python Data Structures | Using Databases with Python</p>
+
+                <h5>Graphic Designing Certificate</h5>
+                <p class="edu_p1">Hunter College | Lexington Ave, NY</p>
+                <p class="edu_p2">Sep 2014 - Dec 2015</p>
+                <p>Adobe InDesign, Advance Adobe Illustrator and Photoshop, Typography, HTML, Flash, Visual Designing for everyone, Business of Graphic Designing, Making a professional portfolio.</p>
+                
+                <!-- Tech details -->
+                <h3 style="margin-top: 3em;">Skills</h3>
+                <hr>
+                <h5>As graphic designer:</h5>
+                <p>Adobe Illustartor, Photoshop, In Design, Corel Draw.</p> 
+                <h5>As video editing and animation:</h5>
+                <p>Premiere Pro, After Effect, 3d Studio Max, Filmora</p>
+                <h5>As full-stack developer:</h5>
+                <p>HTML, CSS, Javascript, Python, Django, React, SQL, Nodejs, Expressjs, mongoDB, IBM Cloud services, Docker, Kubernetes</p>
+                <h5>As printer:</h5>
+                <p>Can print on T-shirt, hoodies, caps, etc. Good experience of heat tranfers and digital cutters.</p>
+
+            </article>
+        </section>
+    </div>
+    
+    <!-- Contact -->
+    <div id="contact" class="page">
+        <form id="form">
+            <div class="field">
+              <label for="name">name</label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="field">
+              <label for="email">email</label>
+              <input type="text" name="email" id="email" required>
+            </div>
+            <div class="field">
+              <label for="subject">subject</label>
+              <input type="text" name="subject" id="subject" required>
+            </div>
+            <div class="field">
+              <label for="message">message</label>
+              <textarea type="text" name="message" id="message" rows="4" required></textarea>
+            </div>
+            <input type="submit" id="button" value="Send Message" >
+        </form>
+        <hr>
+        <div class="info">
+            <h3>Contact info</h3>
+            <p>Queens NYC New York, USA</p>
+            <p>+1 929 261 3767</p>
+            <p>umairny1@gmail.com</p>
+            <p><a href="http://umairny.herokuapp.com" target="_blank">umairny.herokuapp.com</a></p> 
+            <p><a href="http://umairny.github.io" target="_blank">umairny.github.io</a></p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div id="news">
+            <ul>
+                <li>Bringing your creativity to life.</li>
+                <li>We build design that build your business.</li>
+                <li>Cool images deserve cool presentation.</li>
+                <li>The goal is to build your business.</li>
+                <li>Creative, flexible and affordable design.</li>
+            </ul>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
 </html>

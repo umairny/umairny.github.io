@@ -451,7 +451,7 @@ footer{
     .icon{ 
         display: block;
     }
-    #home, #about, #design, #contact, #dev {
+    #home, #about, #design, #contact, #dev, #project {
         height: 60vh;
         width: 90%;
         overflow-y: scroll;

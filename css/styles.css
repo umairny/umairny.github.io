@@ -350,6 +350,12 @@ a:hover{
 #contact form input:focus{
     box-shadow: 0px 0px 15px gold;
 }
+.social {
+    margin: 10px;
+}
+.social>a>img {
+    margin: 10px;
+}
 #button {
     background-color: #4CAF50; /* Green */
     border: none;

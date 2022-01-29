@@ -356,6 +356,9 @@ a:hover{
 .social>a>img {
     margin: 10px;
 }
+.social>a>img:hover {
+    opacity: 0.5;
+}
 #button {
     background-color: #4CAF50; /* Green */
     border: none;

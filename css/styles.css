@@ -143,7 +143,17 @@ nav ul li a:hover{
     font-size: 1.25em;
     margin: 0.5em;
 }
-
+.proj{
+    font-family: 'Playfair Display', serif;
+    background-color: goldenrod;
+    padding: 5px 10px;
+    margin: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+.proj:hover{
+    color: #000000;
+}
 /* Design page content setting */
 #design{
     display: none;

@@ -1,0 +1,252 @@
+/* Gallery Page Styles */
+.gallery-page {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    color: var(--text-primary);
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.gallery-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--border-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--accent-color), #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gallery-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filter Buttons */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 50;
+    /* High z-index for container */
+    flex-wrap: wrap;
+    pointer-events: auto;
+    /* Ensure pointer events are captured */
+}
+
+.filter-btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    backdrop-filter: blur(5px);
+    position: relative;
+    /* Ensure z-index works */
+    z-index: 51;
+    /* Higher than container */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove mobile tap highlight */
+    touch-action: manipulation;
+    /* Disable double-tap zoom delay */
+}
+
+/* Hover effects only for devices that support hover */
+@media (hover: hover) {
+    .filter-btn:hover {
+        background: var(--bg-shape);
+        border-color: var(--accent-color);
+        color: var(--text-primary);
+    }
+}
+
+.filter-btn.active {
+    background: var(--accent-glow);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Project Card 3D */
+.project-card-3d-wrapper {
+    perspective: 1000px;
+    height: 450px;
+    width: 100%;
+}
+
+.project-card-3d {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card-3d:hover {
+    box-shadow: 0 20px 40px -5px var(--accent-glow);
+}
+
+.card-image-container {
+    position: absolute;
+    inset: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.project-card-3d:hover .card-bg-image {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.project-card-3d:hover .card-overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.card-content-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.card-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid var(--glass-border);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0 0 1rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 2;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    background: var(--accent-glow);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .filter-container {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        min-width: 80px;
+        /* Ensure a minimum touch target width */
+    }
+}

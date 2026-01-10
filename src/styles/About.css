@@ -1,0 +1,232 @@
+/* About Section Styles */
+.about-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    transition: background 0.5s ease;
+}
+
+/* Background Elements */
+.about-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    top: 20%;
+    left: -10%;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--border-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.about-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Bio takes more width */
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+/* Cards */
+.bento-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px -10px var(--accent-glow);
+    transform: translateY(-5px);
+}
+
+.hero-bio {
+    grid-row: span 2;
+}
+
+.bio-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.bio-text span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Journey Highlights */
+.journey-card {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), transparent);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.journey-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.journey-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-container {
+    grid-column: span 2;
+    margin-top: 2rem;
+}
+
+.skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-title {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Skill Tabs */
+.skill-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-shape);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: var(--bg-primary);
+    color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.tech-card:hover::before {
+    opacity: 0.4;
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.tech-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 968px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-column: span 1;
+    }
+
+    .skill-tabs {
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+    }
+}

@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
 import { projectsData } from '../Data';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
     const [filter, setFilter] = useState('all');
+    const navigate = useNavigate();
+
 
     const filteredProjects = projectsData.filter(project => {
         if (filter === 'all') return true;
@@ -14,7 +17,8 @@ const Projects = () => {
     const categories = [
         { name: 'All', value: 'all' },
         { name: 'Development', value: 'development' },
-        { name: 'Design', value: 'design' }
+        { name: 'Design', value: 'design' },
+        { name: 'Gallery', value: 'gallery' }
     ];
 
     // Parent variant for staggering children
@@ -61,7 +65,13 @@ const Projects = () => {
                     {categories.map((category) => (
                         <button
                             key={category.value}
-                            onClick={() => setFilter(category.value)}
+                            onClick={() => {
+                                if (category.value === 'gallery') {
+                                    navigate('/gallery');
+                                } else {
+                                    setFilter(category.value);
+                                }
+                            }}
                             style={{
                                 padding: '0.8rem 1.5rem',
                                 borderRadius: '2rem',

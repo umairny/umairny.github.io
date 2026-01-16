@@ -5,12 +5,14 @@ import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { navLinks } from '../Data';
 
+
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const navigate = useNavigate();
   const location = useLocation();
+
 
   // Add scroll listener for stronger glass effect and active section tracking
   useEffect(() => {
@@ -109,7 +111,13 @@ const Navbar = ({ theme, toggleTheme }) => {
       }}>
         {/* Logo */}
         <div style={{ fontSize: '1.8rem', fontWeight: '800', cursor: 'pointer', zIndex: 1001 }} onClick={() => handleNavigation('home')}>
-          <span className="text-gradient">Umair</span>
+          <span className="text-gradient">
+            {theme === 'dark' ? (
+              <img src="/LogoDark.png" alt="Umair" style={{ height: '40px' }} />
+            ) : (
+              <img src="/Logo.png" alt="Umair" style={{ height: '40px' }} />
+            )}
+          </span>
         </div>
 
         {/* Desktop Menu */}

@@ -61,7 +61,7 @@ const Projects = () => {
                 </motion.h2>
 
                 {/* Filter Buttons */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '3rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
                     {categories.map((category) => (
                         <button
                             key={category.value}
@@ -178,7 +178,7 @@ const Projects = () => {
                                         ))}
                                     </div>
 
-                                    <div style={{ display: 'flex', gap: '1rem', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
+                                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
                                         {project.links.github !== "#" && (
                                             <a href={project.links.github} target="_blank" rel="noopener noreferrer"
                                                 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600', fontSize: '0.95rem' }}

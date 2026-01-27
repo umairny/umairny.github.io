@@ -1,8 +1,108 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
-import { FaCode, FaPaintBrush, FaReact, FaLaptopCode, FaPalette } from 'react-icons/fa';
+import { FaCode, FaPaintBrush, FaReact, FaLaptopCode, FaPalette, FaArrowRight } from 'react-icons/fa';
 import { SiAdobephotoshop, SiAdobeillustrator } from 'react-icons/si';
 import { heroData } from '../Data';
+
+
+
+
+// Typewriter Effect Component
+const TypewriterText = ({ text }) => {
+  const characters = Array.from(text);
+
+  return (
+    <motion.span
+      key={text} // Force re-render on text change
+      initial="hidden"
+      animate="visible"
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      style={{ display: 'inline-flex', alignItems: 'center' }}
+    >
+      {characters.map((char, index) => (
+        <motion.span
+          key={`${text}-${index}`}
+          variants={{
+            hidden: { opacity: 0, display: 'none' },
+            visible: { opacity: 1, display: 'inline' }
+          }}
+          transition={{ duration: 0, delay: index * 0.05 }}
+          style={{ whiteSpace: 'pre' }}
+        >
+          {char}
+        </motion.span>
+      ))}
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+        style={{
+          display: 'inline-block',
+          width: '2px',
+          height: '1.2em',
+          background: 'var(--accent-color)',
+          marginLeft: '4px',
+          verticalAlign: 'middle'
+        }}
+      />
+    </motion.span>
+  );
+}; // End TypewriterText
+
+// Game Style Text Component
+const GameText = ({ text, className, style, delay = 0, isHeading = false }) => {
+  const items = isHeading ? Array.from(text) : text.split(" ");
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: isHeading ? 0.05 : 0.02, delayChildren: delay }
+    }
+  };
+
+  const child = {
+    hidden: isHeading
+      ? { opacity: 0, scale: 0.5, y: 20 }
+      : { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", damping: 10, stiffness: 100 }
+    }
+  };
+
+  return (
+    <motion.div
+      className={className}
+      style={{ display: 'inline-block', ...style }}
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {items.map((item, index) => (
+        <motion.span
+          variants={child}
+          key={index}
+          style={{
+            display: "inline-block",
+            marginRight: isHeading ? "0.02em" : "0.25em",
+            whiteSpace: "pre"
+          }}
+          whileHover={isHeading ? {
+            scale: 1.2,
+            rotate: Math.random() * 10 - 5,
+            color: 'var(--accent-color)'
+          } : {}}
+        >
+          {item}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
+};
 
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -177,39 +277,39 @@ const Hero = () => {
         className="container"
         style={{
           zIndex: 1,
-          rotateX,
-          rotateY,
+          zIndex: 1,
           y: yRange,
-          opacity: opacityRange,
-          transformStyle: "preserve-3d"
+          opacity: opacityRange
         }}
       >
-        <motion.h3
-          style={{
-            fontSize: '1.5rem',
-            color: 'var(--accent-color)',
-            fontWeight: '600',
-            marginBottom: '1rem',
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-            transform: "translateZ(30px)"
-          }}
-        >
-          Hello, I am
-        </motion.h3>
+        <h3 style={{ marginBottom: '1rem' }}>
+          <GameText
+            text="Hello, I am"
+            isHeading={true}
+            delay={0.2}
+            style={{
+              fontSize: '1.5rem',
+              color: 'var(--accent-color)',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '2px',
+            }}
+          />
+        </h3>
 
-        <motion.h1
-          className="text-gradient"
-          style={{
-            fontSize: 'clamp(3rem, 8vw, 6rem)',
-            fontWeight: '800',
-            lineHeight: '1.1',
-            marginBottom: '1.5rem',
-            transform: "translateZ(60px)"
-          }}
-        >
-          {heroData.name}
-        </motion.h1>
+        <h1 style={{ marginBottom: '1.5rem' }}>
+          <GameText
+            text={heroData.name}
+            isHeading={true}
+            delay={0.5}
+            className="text-gradient"
+            style={{
+              fontSize: 'clamp(2rem, 8vw, 6rem)',
+              fontWeight: '800',
+              lineHeight: '1.1',
+            }}
+          />
+        </h1>
 
         <div style={{
           fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
@@ -224,49 +324,83 @@ const Hero = () => {
           gap: '10px',
           transform: "translateZ(40px)"
         }}>
-          <span style={{ color: 'var(--text-secondary)', fontWeight: '600' }}>I am a</span>
+          <GameText text="I am a" isHeading={true} delay={1.0} style={{ color: 'var(--text-secondary)', fontWeight: '600' }} />
           <AnimatePresence mode="wait">
-            <motion.span
-              key={roleIndex}
-              initial={{ opacity: 0, y: 20, rotateX: 90 }}
-              animate={{ opacity: 1, y: 0, rotateX: 0 }}
-              transition={{ duration: 0.5 }}
-              style={{ color: 'var(--text-primary)', fontWeight: '600', display: 'inline-block' }}
-            >
-              {heroData.roles[roleIndex]}
-            </motion.span>
+            <TypewriterText text={heroData.roles[roleIndex]} />
           </AnimatePresence>
         </div>
 
-        <motion.p
-          style={{
-            maxWidth: '600px',
-            margin: '0 auto 3rem',
-            fontSize: '1.1rem',
-            color: 'var(--text-secondary)',
-            transform: "translateZ(20px)"
-          }}
-        >
-          {heroData.tagline}
-        </motion.p>
+        <div style={{ maxWidth: '600px', margin: '0 auto 3rem' }}>
+          <GameText
+            text={heroData.tagline}
+            delay={1.2}
+            style={{
+              fontSize: '1.1rem',
+              color: 'var(--text-secondary)',
+            }}
+          />
+        </div>
 
         <motion.button
-          whileHover={{ scale: 1.05, boxShadow: '0 0 20px var(--accent-glow)' }}
+          initial="initial"
+          whileHover="hover"
           whileTap={{ scale: 0.95 }}
           onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
           style={{
-            padding: '1rem 2.5rem',
-            fontSize: '1.1rem',
+            position: 'relative',
+            padding: '1rem 3rem',
+            fontSize: '1.2rem',
             fontWeight: '600',
-            background: 'var(--accent-color)',
-            color: '#fff',
+            background: 'transparent',
+            color: 'var(--text-primary)', // Default text color
+            border: '2px solid var(--accent-color)',
             borderRadius: '50px',
-            boxShadow: '0 10px 20px -10px var(--accent-color)',
-            transform: "translateZ(50px)",
-            cursor: 'pointer'
+            cursor: 'pointer',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '12px',
+            overflow: 'hidden',
+            zIndex: 1,
+            boxShadow: '0 4px 15px rgba(0,0,0,0.05)'
           }}
         >
-          View Work
+          {/* Animated Background Fill */}
+          <motion.div
+            variants={{
+              initial: { scaleX: 0, originX: 0 },
+              hover: { scaleX: 1 }
+            }}
+            transition={{ type: 'tween', ease: 'easeInOut', duration: 0.3 }}
+            style={{
+              position: 'absolute',
+              top: 0, left: 0, right: 0, bottom: 0,
+              background: 'var(--accent-color)',
+              zIndex: -1,
+            }}
+          />
+
+          {/* Button Text */}
+          <motion.span
+            variants={{
+              initial: { color: 'var(--accent-color)' }, // Matches border initally
+              hover: { color: '#ffffff' }
+            }}
+            style={{ zIndex: 1, display: 'inline-block' }}
+          >
+            View Work
+          </motion.span>
+
+          {/* Arrow Icon */}
+          <motion.span
+            variants={{
+              initial: { x: 0, color: 'var(--accent-color)' },
+              hover: { x: 5, color: '#ffffff' }
+            }}
+            style={{ zIndex: 1, display: 'flex', alignItems: 'center' }}
+          >
+            <FaArrowRight />
+          </motion.span>
         </motion.button>
       </motion.div>
     </section>

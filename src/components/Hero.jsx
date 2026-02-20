@@ -277,7 +277,6 @@ const Hero = () => {
         className="container"
         style={{
           zIndex: 1,
-          zIndex: 1,
           y: yRange,
           opacity: opacityRange
         }}

@@ -53,15 +53,16 @@ export const projectsData = [
     category: "Mobile App",
     type: "design & development",
     description: "MMBud is a mobile app that helps users to manage their budget and expenses.",
-    stack: ["Django", "IBM Cloud", "React"],
-    image: "https://via.placeholder.com/600x400?text=Cars+Dealership",
+    stack: ["Expo", "React Native", "SQLite"],
+    image: "/images/phoneview.png",
     images: [
-      "https://via.placeholder.com/600x400?text=MMBud+Dashboard",
-      "https://via.placeholder.com/600x400?text=MMBud+Budget",
-      "https://via.placeholder.com/600x400?text=MMBud+Expenses"
+      "/images/phoneview1.png",
+      "/images/phoneview2.png",
+      "/images/phoneview3.png",
     ],
     links: {
       demo: "https://play.google.com/store/apps/details?id=com.umairny.MMBud&pcampaignid=web_share",
+      youtube: "https://youtu.be/2Hja2bXLmOE?si=Pprx7Va3JYq9y7fX",
       github: "#"
     }
   },
@@ -71,16 +72,17 @@ export const projectsData = [
     category: "MERN Stack",
     type: "development",
     description: "Full-stack restaurant application allowing users to view dishes, favorite items, and leave comments.",
-    stack: ["React", "Redux", "Node.js", "MongoDB"],
-    image: "/images/restaurant.png",
+    stack: ["React", "Node.js"],
+    image: "/images/restaurant01.png",
     images: [
+      "/images/restaurant01.png",
       "/images/restaurant.png",
-      "/images/restaurant.png", // Duplicate as placeholder
-      "/images/restaurant.png"  // Duplicate as placeholder
+      "/images/restaurant02.png",
+      "/images/restaurant03.png",
     ],
     links: {
-      demo: "#",
-      github: "https://github.com/umairny/restaurant",
+      demo: "https://umairny.github.io/newRestaurant/",
+      github: "#",
       youtube: "https://www.youtube.com/watch?v=2951AHT8vmA"
     }
   },
@@ -93,9 +95,9 @@ export const projectsData = [
     stack: ["Python", "Django", "SQL"],
     image: "/images/auction.png",
     images: [
-      "/images/auction.png",
-      "/images/auction.png",
-      "/images/auction.png"
+      "/images/auction01.png",
+      "/images/auction02.png",
+      "/images/auction03.png"
     ],
     links: {
       youtube: "https://www.youtube.com/watch?v=uiIx6cprAaE",
@@ -194,7 +196,6 @@ export const projectsData = [
 
 export const contactData = {
   email: "umairny1@gmail.com",
-  phone: "+1 929 261 3767",
   location: "Queens, NYC, USA",
   social: [
     { name: "Github", url: "https://github.com/umairny" },

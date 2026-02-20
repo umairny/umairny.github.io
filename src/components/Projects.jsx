@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
 import { projectsData } from '../Data';
 import { useNavigate } from 'react-router-dom';
+import ProjectDetailsModal from './ProjectDetailsModal';
 
 const Projects = () => {
     const [filter, setFilter] = useState('all');
+    const [selectedProject, setSelectedProject] = useState(null);
     const navigate = useNavigate();
 
 
@@ -104,6 +106,7 @@ const Projects = () => {
                                 exit="exit"
                                 variants={cardVariants}
                                 className="glass-card"
+                                onClick={() => setSelectedProject(project)}
                                 whileHover={{
                                     y: -10,
                                     boxShadow: '0 20px 40px -10px rgba(0,0,0,0.3)',
@@ -114,7 +117,8 @@ const Projects = () => {
                                     overflow: 'hidden',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    transition: 'box-shadow 0.3s ease'
+                                    transition: 'box-shadow 0.3s ease',
+                                    cursor: 'pointer'
                                 }}
                             >
                                 <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
@@ -207,6 +211,15 @@ const Projects = () => {
                     </AnimatePresence>
                 </motion.div>
             </div>
+
+            <AnimatePresence>
+                {selectedProject && (
+                    <ProjectDetailsModal
+                        project={selectedProject}
+                        onClose={() => setSelectedProject(null)}
+                    />
+                )}
+            </AnimatePresence>
 
             <style>{`
         .projects-grid {

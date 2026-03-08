@@ -1,6 +1,8 @@
 import { FaPython, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaPaintBrush, FaVideo, FaCode, FaRocket } from 'react-icons/fa';
 import { SiDjango, SiMongodb, SiExpress, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiDocker, SiFigma, SiAdobeindesign, SiCoreldraw, SiCanva, SiD3Dotjs } from 'react-icons/si';
 
+export const ASSET_BASE = import.meta.env.DEV ? '/' : '/portfolio2026/';
+
 export const navLinks = [
   { id: 'home', title: 'Home' },
   { id: 'about', title: 'About' },

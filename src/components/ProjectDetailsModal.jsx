@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaExternalLinkAlt, FaGithub, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { ASSET_BASE } from '../Data';
 import '../styles/ProjectDetailsModal.css';
 
 const ProjectDetailsModal = ({ project, onClose }) => {
@@ -45,7 +46,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImageIndex}
-                                src={`${import.meta.env.BASE_URL}${images[currentImageIndex]}`}
+                                src={`${ASSET_BASE}${images[currentImageIndex]}`}
                                 alt={`${project.title} view ${currentImageIndex + 1}`}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}

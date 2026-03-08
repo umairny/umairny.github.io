@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
+import LogoDark from '../assets/LogoDark.png';
+import Logo from '../assets/Logo.png';
 import { navLinks } from '../Data';
 
 
@@ -113,9 +115,9 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div style={{ fontSize: '1.8rem', fontWeight: '800', cursor: 'pointer', zIndex: 1001 }} onClick={() => handleNavigation('home')}>
           <span className="text-gradient">
             {theme === 'dark' ? (
-              <img src={`${import.meta.env.BASE_URL}LogoDark.png`} alt="Umair" style={{ height: '40px' }} />
+              <img src={LogoDark} alt="Umair" style={{ height: '40px' }} />
             ) : (
-              <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="Umair" style={{ height: '40px' }} />
+              <img src={Logo} alt="Umair" style={{ height: '40px' }} />
             )}
           </span>
         </div>

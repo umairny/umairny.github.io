@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
-import { projectsData } from '../Data';
+import { projectsData, ASSET_BASE } from '../Data';
 import { useNavigate } from 'react-router-dom';
 import ProjectDetailsModal from './ProjectDetailsModal';
 
@@ -126,7 +126,7 @@ const Projects = () => {
                                     <div style={{
                                         width: '100%',
                                         height: '100%',
-                                        backgroundImage: `url(${import.meta.env.BASE_URL}${project.image})`,
+                                        backgroundImage: `url(${ASSET_BASE}${project.image})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                         transition: 'transform 0.6s ease'

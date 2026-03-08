@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { ASSET_BASE } from '../Data';
 import '../styles/Gallery.css'; // Shared CSS
 
 const ProjectCard3D = ({ project }) => {
@@ -55,7 +56,7 @@ const ProjectCard3D = ({ project }) => {
                 >
                     <div
                         className="card-bg-image"
-                        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${project.image})` }}
+                        style={{ backgroundImage: `url(${ASSET_BASE}${project.image})` }}
                     />
                     <div className="card-overlay" />
                 </div>

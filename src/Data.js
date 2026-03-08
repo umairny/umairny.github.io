@@ -38,7 +38,7 @@ export const aboutData = {
         { name: "Indesign", icon: SiAdobeindesign, color: "#FF9A00" },
         { name: "Premiere Pro", icon: SiAdobepremierepro, color: "#9999FF" },
         { name: "CorelDRAW", icon: SiCoreldraw, color: "#FF9A00" },
-        { name: "3d Max", icon: "/icons/3ds.svg", color: "#FF9A00" },
+        { name: "3d Max", icon: "icons/3ds.svg", color: "#FF9A00" },
         { name: "Figma", icon: SiFigma, color: "#FF5733" },
         { name: "UI/UX", icon: FaPaintBrush, color: "#FF5733" },
       ]
@@ -54,11 +54,11 @@ export const projectsData = [
     type: "design & development",
     description: "MMBud is a mobile app that helps users to manage their budget and expenses.",
     stack: ["Expo", "React Native", "SQLite"],
-    image: "/images/phoneview.png",
+    image: "images/phoneview.png",
     images: [
-      "/images/phoneview1.png",
-      "/images/phoneview2.png",
-      "/images/phoneview3.png",
+      "images/phoneview1.png",
+      "images/phoneview2.png",
+      "images/phoneview3.png",
     ],
     links: {
       demo: "https://play.google.com/store/apps/details?id=com.umairny.MMBud&pcampaignid=web_share",
@@ -73,12 +73,12 @@ export const projectsData = [
     type: "development",
     description: "Full-stack restaurant application allowing users to view dishes, favorite items, and leave comments.",
     stack: ["React", "Node.js"],
-    image: "/images/restaurant01.png",
+    image: "images/restaurant01.png",
     images: [
-      "/images/restaurant01.png",
-      "/images/restaurant.png",
-      "/images/restaurant02.png",
-      "/images/restaurant03.png",
+      "images/restaurant01.png",
+      "images/restaurant.png",
+      "images/restaurant02.png",
+      "images/restaurant03.png",
     ],
     links: {
       demo: "https://umairny.github.io/newRestaurant/",
@@ -93,11 +93,11 @@ export const projectsData = [
     type: "development",
     description: "eBay-style auction site where users can list items, bid, and manage watchlists.",
     stack: ["Python", "Django", "SQL"],
-    image: "/images/auction.png",
+    image: "images/auction.png",
     images: [
-      "/images/auction01.png",
-      "/images/auction02.png",
-      "/images/auction03.png"
+      "images/auction01.png",
+      "images/auction02.png",
+      "images/auction03.png"
     ],
     links: {
       youtube: "https://www.youtube.com/watch?v=uiIx6cprAaE",
@@ -112,10 +112,10 @@ export const projectsData = [
     type: "development",
     description: "Twitter-like social platform with posting, liking, following, and profile editing features.",
     stack: ["Python", "Django", "JavaScript"],
-    image: "/images/socialmedia.png",
+    image: "images/socialmedia.png",
     images: [
-      "/images/socialmedia.png",
-      "/images/socialmedia.png"
+      "images/socialmedia.png",
+      "images/socialmedia.png"
     ],
     links: {
       youtube: "https://youtu.be/YGODEgPwSGY?si=NbuE3yx9LvyiJRuO",
@@ -130,10 +130,10 @@ export const projectsData = [
     type: "development",
     description: "Single Page Application simulating an email client (compose, reply, archive) using Django API.",
     stack: ["Django", "JavaScript", "API"],
-    image: "/images/email.png",
+    image: "images/email.png",
     images: [
-      "/images/email.png",
-      "/images/email.png"
+      "images/email.png",
+      "images/email.png"
     ],
     links: {
       demo: "https://umairny.pythonanywhere.com/mail/",
@@ -147,11 +147,11 @@ export const projectsData = [
     type: "design",
     description: "Complete visual identity redesign for a tech startup, including logo, color palette, and typography.",
     stack: ["Illustrator", "Photoshop", "Brand Strategy"],
-    image: "/images/ModernBrandKit.png",
+    image: "images/ModernBrandKit.png",
     images: [
-      "/images/ModernBrandKit.png",
-      "/images/ModernBrandKit.png",
-      "/images/ModernBrandKit.png"
+      "images/ModernBrandKit.png",
+      "images/ModernBrandKit.png",
+      "images/ModernBrandKit.png"
     ],
     links: {
       demo: "#", // Link to Behance/Dribbble
@@ -165,10 +165,10 @@ export const projectsData = [
     type: "design",
     description: "Mobile application interface design focused on sustainability tracking with clean, green aesthetics.",
     stack: ["Figma", "Prototyping", "User Research"],
-    image: "/images/ecofredinlyUI.png",
+    image: "images/ecofredinlyUI.png",
     images: [
-      "/images/ecofredinlyUI.png",
-      "/images/ecofredinlyUI.png"
+      "images/ecofredinlyUI.png",
+      "images/ecofredinlyUI.png"
     ],
     links: {
       demo: "#",
@@ -182,10 +182,10 @@ export const projectsData = [
     type: "design",
     description: "Set of cohesive social media templates and assets for a lifestyle brand campaign.",
     stack: ["Photoshop", "Canva", "Content Strategy"],
-    image: "/images/socailmediaKit.png",
+    image: "images/socailmediaKit.png",
     images: [
-      "/images/socailmediaKit.png",
-      "/images/socailmediaKit.png"
+      "images/socailmediaKit.png",
+      "images/socailmediaKit.png"
     ],
     links: {
       demo: "#",

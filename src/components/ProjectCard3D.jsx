@@ -55,7 +55,7 @@ const ProjectCard3D = ({ project }) => {
                 >
                     <div
                         className="card-bg-image"
-                        style={{ backgroundImage: `url(${project.image})` }}
+                        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${project.image})` }}
                     />
                     <div className="card-overlay" />
                 </div>

@@ -109,7 +109,7 @@ const About = () => {
                                             className="tech-card"
                                         >
                                             {typeof skill.icon === 'string' ? (
-                                                <img src={skill.icon} alt={skill.name} className="tech-icon" style={{ width: '40px', height: '40px' }} />
+                                                <img src={`${import.meta.env.BASE_URL}${skill.icon}`} alt={skill.name} className="tech-icon" style={{ width: '40px', height: '40px' }} />
                                             ) : (
                                                 <skill.icon className="tech-icon" style={{ color: skill.color }} />
                                             )}

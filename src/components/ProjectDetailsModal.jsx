@@ -45,7 +45,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImageIndex}
-                                src={images[currentImageIndex]}
+                                src={`${import.meta.env.BASE_URL}${images[currentImageIndex]}`}
                                 alt={`${project.title} view ${currentImageIndex + 1}`}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}

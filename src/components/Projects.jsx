@@ -126,7 +126,7 @@ const Projects = () => {
                                     <div style={{
                                         width: '100%',
                                         height: '100%',
-                                        backgroundImage: `url(${project.image})`,
+                                        backgroundImage: `url(${import.meta.env.BASE_URL}${project.image})`,
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                         transition: 'transform 0.6s ease'

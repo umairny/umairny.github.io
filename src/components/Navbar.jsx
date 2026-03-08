@@ -113,9 +113,9 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div style={{ fontSize: '1.8rem', fontWeight: '800', cursor: 'pointer', zIndex: 1001 }} onClick={() => handleNavigation('home')}>
           <span className="text-gradient">
             {theme === 'dark' ? (
-              <img src="/LogoDark.png" alt="Umair" style={{ height: '40px' }} />
+              <img src={`${import.meta.env.BASE_URL}LogoDark.png`} alt="Umair" style={{ height: '40px' }} />
             ) : (
-              <img src="/Logo.png" alt="Umair" style={{ height: '40px' }} />
+              <img src={`${import.meta.env.BASE_URL}Logo.png`} alt="Umair" style={{ height: '40px' }} />
             )}
           </span>
         </div>

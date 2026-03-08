@@ -7,7 +7,7 @@ import { ASSET_BASE } from './Data'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={ASSET_BASE}>
+    <BrowserRouter basename={ROUTER_BASE}>
       <App />
     </BrowserRouter>
   </StrictMode>,

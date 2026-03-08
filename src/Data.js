@@ -2,6 +2,7 @@ import { FaPython, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaPa
 import { SiDjango, SiMongodb, SiExpress, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiDocker, SiFigma, SiAdobeindesign, SiCoreldraw, SiCanva, SiD3Dotjs } from 'react-icons/si';
 
 export const ASSET_BASE = import.meta.env.DEV ? '/' : '/portfolio2026/';
+export const ROUTER_BASE = import.meta.env.DEV ? '/' : '/portfolio2026';
 
 export const navLinks = [
   { id: 'home', title: 'Home' },

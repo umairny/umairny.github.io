@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
-import { projectsData, ASSET_BASE } from '../Data';
+import { ASSET_BASE } from '../Data';
+import { projectsData } from '../gallery-data';
 import { useNavigate } from 'react-router-dom';
 import ProjectDetailsModal from './ProjectDetailsModal';
 
@@ -97,7 +98,7 @@ const Projects = () => {
                     layout
                 >
                     <AnimatePresence mode="popLayout">
-                        {filteredProjects.map((project) => (
+                        {filteredProjects.slice(0, 6).map((project) => (
                             <motion.div
                                 key={project.id}
                                 layout

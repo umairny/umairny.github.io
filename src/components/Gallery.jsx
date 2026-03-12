@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { projectsData } from '../Data';
+import { projectsData } from '../gallery-data';
 import ProjectCard3D from './ProjectCard3D';
 import ProjectDetailsModal from './ProjectDetailsModal';
 import '../styles/Gallery.css';
